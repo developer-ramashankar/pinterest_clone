@@ -12,6 +12,14 @@
       <!--pinterest logo-->
       <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
       <p class="header">Log In to see more</p>
+
+      <% if(error.length >0 ) { %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong><%= error%></strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <% }%>
+
       <form action="/login" method="post">
         <input type="text" name="username" placeholder="Username" class="detail" /><br />
       <input type="password" name="password" placeholder="Password" class="detail" />
